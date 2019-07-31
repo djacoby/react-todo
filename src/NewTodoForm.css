@@ -1,0 +1,28 @@
+.NewTodoForm-form {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.NewTodoForm-form label {
+  float: left;
+}
+
+.NewTodoForm button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid #fcfcfc;
+}
+
+.NewTodoForm button:hover {
+  background-color: #fcfcfc;
+  color: #e73838;
+}

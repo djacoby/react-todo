@@ -1,0 +1,38 @@
+.ToDoList {
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin-top: 5rem;
+  box-shadow: 10px 10px 5px grey;
+  background-color: #e73838;
+  font-family: "roboto", sans-serif;
+  color: #fcfcfc;
+}
+
+.ToDoList h1 {
+  float: left;
+  margin-left: 85px;
+  padding-top: 20px;
+}
+
+.ToDoList p {
+  float: left;
+  margin-left: 90px;
+}
+.ToDoList-line {
+  border: none;
+  height: 20px;
+  width: 60%;
+  height: 50px;
+  border-bottom: 1px solid #fafafa;
+  padding-top: 75px;
+  margin-left: 90px;
+}
+
+.ToDoList-todos {
+  margin-top: 5rem;
+  display: grid;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
