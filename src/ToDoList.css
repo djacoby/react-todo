@@ -6,7 +6,6 @@
   margin-top: 5rem;
   box-shadow: 10px 10px 5px grey;
   background-color: #e73838;
-  font-family: "roboto", sans-serif;
   color: #fcfcfc;
 }
 
@@ -14,12 +13,14 @@
   float: left;
   margin-left: 85px;
   padding-top: 20px;
+  font-weight: 100;
 }
 
 .ToDoList p {
   float: left;
   margin-left: 90px;
 }
+
 .ToDoList-line {
   border: none;
   height: 20px;
