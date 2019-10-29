@@ -32,3 +32,11 @@
   background-color: #fcfcfc;
   color: #e73838;
 }
+
+@media only screen and (max-width: 328px) {
+  .NewTodoForm-form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

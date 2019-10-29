@@ -66,7 +66,7 @@ export default class ToDoList extends Component {
         <div className="ToDoList-title">
           <h1>Todo List</h1>
           <div className="ToDoList-line" />
-          <p>Another React Todo List App</p>
+          <p className="ToDoList-subtitle">Another React Todo List App</p>
         </div>
 
         <div className="ToDoList-todos">{this.renderToDos()}</div>
