@@ -6,7 +6,7 @@ export default class ToDoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: []
+      todos: JSON.parse(window.localStorage.getItem("todos") || "[]")
     };
     this.addToDo = this.addToDo.bind(this);
     this.update = this.update.bind(this);
@@ -14,9 +14,13 @@ export default class ToDoList extends Component {
 
   addToDo(todo) {
     let newTodo = { ...todo };
-    this.setState(state => ({
-      todos: [...state.todos, newTodo]
-    }));
+    this.setState(
+      state => ({
+        todos: [...state.todos, newTodo]
+      }),
+      () =>
+        window.localStorage.setItem("todos", JSON.stringify(this.state.todos))
+    );
   }
 
   update(id, updatedTodo) {
@@ -26,13 +30,23 @@ export default class ToDoList extends Component {
       }
       return todo;
     });
-    this.setState({ todos: updatedTodos });
+    this.setState(
+      {
+        todos: updatedTodos
+      },
+      () =>
+        window.localStorage.setItem("todos", JSON.stringify(this.state.todos))
+    );
   }
 
   remove(id) {
-    this.setState({
-      todos: this.state.todos.filter(todo => todo.id !== id)
-    });
+    const updatedTodos = this.state.todos.filter(todo => todo.id !== id);
+    this.setState(
+      {
+        todos: updatedTodos
+      },
+      window.localStorage.setItem("todos", JSON.stringify(updatedTodos))
+    );
   }
 
   renderToDos() {
